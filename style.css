@@ -1,0 +1,518 @@
+/* GLOBAL */
+/* hide scrollbar */
+body::-webkit-scrollbar { /* Chrome, Safari, Opera */
+    display: none;
+  }
+
+html, body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    cursor: url('assets/cursor.png') 30 30, default;
+}
+
+a:hover {
+    cursor: url('assets/cursor.png') 30 30, default;
+
+}
+
+
+/* assign global vars */
+:root {
+    --red-color: rgb(190, 50, 40);
+    --bg-color: rgb(230, 210, 200); /*rgb(240, 210, 200)*/
+    --style-font: 'Eagle Lake', cursive; 
+    --body-font: 'EB Garamond', serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--bg-color);
+    max-width: 100%;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--red-color);
+    font-family: var(--style-font);
+    font-weight: bold;
+}
+
+.content {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: 70px;
+    padding-bottom: 20px;
+}
+
+/* LANDING PAGE */
+.landing {
+    max-width: 100%;
+    width: 100%;
+    max-height: 830px;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 1px;
+    transition: 0.5s all linear;
+    filter: blur(0)
+}
+
+
+.logo {
+    max-width: 1150px;
+    width: 100%;
+    height: 100%;
+}
+
+.logo1 {
+    position: relative;
+    top: 0;
+    animation: split1 0.5s linear 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.logo2 {
+    position: relative;
+    top: -207px;
+    left: -3px;
+    animation: split2 0.5s linear 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.name {
+    font-size: 86px;
+    position: absolute;
+    top: 345px;
+    left: 520px;
+    animation: nameScale 2.5s linear;
+}
+
+@keyframes split1 {
+    0% {transform: translateY(0)}
+    100% {transform: translateY(-43px)}
+}
+
+@keyframes split2 {
+    0% {transform: translateY(0)}
+    100% {transform: translateY(45px)}
+}
+
+@keyframes nameScale {
+    0% {transform: scale(1%)}
+    20% {transform: scale(10%)}
+    50% {transform: scale(100%)}
+}
+
+
+/* MAIN PAGE */
+.navBar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.navBar a {
+    font-size: 36px;
+    padding: 0 30px;
+    filter: blur(0);
+    transition: 0.5s all;
+}
+
+.navBar a:hover {
+    filter: blur(3px); 
+}
+
+.Lside {
+    width: 30%;
+}
+
+.middle {
+    width: 40%;
+}
+
+.Rside {
+    width: 30%;
+    justify-content: right;
+}
+
+.main-logo {
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: -10;
+    filter: blur(0);
+    transition: 0.5s all;
+    animation: logoPulse 1.5s infinite alternate ease;
+
+    position: relative;
+    left: -30px;
+}
+
+.main-logo:hover {
+    filter: blur(5px);
+}
+
+@keyframes logoPulse {
+    100% {transform: scale(110%)}
+}
+
+
+/* NAV BAR ON PAGES */
+.pageNavBar {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    padding-top: 8px;
+    z-index: 100;
+    text-align: center;
+}
+
+.pageNavBar a {
+    font-size: 24px;
+    padding: 0 80px;
+    filter: blur(0);
+    transition: 0.5s all;
+    font-weight: bold;
+    font-family: var(--style-font);
+}
+
+.pageNavBar a:hover {
+    filter: blur(3px);
+}
+
+.p-Lside {
+    display: flex;
+    width: 40%;
+    justify-content: left; /* bruh */ 
+    justify-items: center;  /* bruh */ 
+}
+
+.p-middle {
+    width: 20%
+}
+
+.p-Rside {
+    display: flex;
+    width: 40%;
+    justify-content: left;
+    justify-items: center; /* bruh */
+}
+
+#halfLogo {
+    max-width: 350px;
+    top: -117px;
+    filter: blur(0);
+    transition: 0.5s all;
+    position: relative;
+
+    left: -100px;
+
+}
+
+#halfLogo img {
+    text-align: center;
+}
+
+#halfLogo:hover {
+    filter: blur(3px);
+}
+
+
+/* CSS FOR ABOUT PAGE */
+.abtText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    margin-top: 170px;
+}
+
+.intro {
+    font-family: var(--style-font);
+    font-size: 26px;
+    color: var(--red-color);
+    position: relative;
+    margin-left: -50px;
+    transition: 0.2s all linear;
+    animation: abtIntroMove 1.5s reverse ease-out;
+}
+
+.bio {
+    font-family: var(--body-font);
+    font-size: 24px;
+    color: var(--red-color);
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin-top: -20px;
+    transition: 0.2s all linear;
+    animation: abtBioMove 1.7s reverse ease-out;
+}
+
+.intro:hover, .bio:hover {
+    transform: scale(105%);
+}
+
+.abtPic {
+    position: relative;
+    filter: blur(0);
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border: 5px var(--red-color) solid;
+    transition: 0.5s all linear;
+    animation: abtPicMove 1s reverse ease-out;
+    z-index: 3;
+}
+
+.abtPic img {
+    width: inherit;
+    height: 100%;
+}
+
+.abtPic:hover {
+    filter: blur(5px);
+}
+
+@keyframes abtPicMove {
+    0% {transform: translateX(0)}
+    100% {transform: translateX(-650px)}
+}
+
+@keyframes abtIntroMove {
+    0% {transform: translateX(0); opacity: 100%}
+    100% {transform: translateX(-1205px); opacity: 0}
+}
+
+@keyframes abtBioMove {
+    0% {transform: translateX(0); opacity: 100%}
+    100% {transform: translateX(-1450px); opacity: 0}
+}
+
+
+/* PORTFOLIO PAGE */       /* loading issues -- videos and poster img */
+.container {
+    max-width: 1920px;
+    display: block;
+    padding-top: 55px;
+    max-height: 1600px;
+}
+
+.portfolioImg {
+    overflow: hidden;
+    max-width: 720px;
+    max-height: 500px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.portfolioImg:hover .overlay {
+    opacity: 0.8;
+}
+
+.portfolioImg:hover .overlayText {
+    opacity: 1;
+}
+
+ .overlay {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: 0.5s all ease;
+    background-color: var(--bg-color);
+    display: flex;
+ }
+
+.overlayText {
+    font-family: var(--style-font);
+    font-size: 28px;
+    color: rgb(175, 35, 25);
+    margin: auto;
+    text-align: center;
+} 
+
+
+.right {        /* hate having this how to get rid and use flexbox perhaps??? */
+    position: relative;
+    top: -1620px;
+    right: -753px;
+    margin-right: 20px;
+    max-width: 720px;
+    width: 100%;
+}
+
+/* img specific adjustments */
+.img1 {
+    width: 100%;
+}
+
+.img2 {
+    width: 140%;
+    position: relative;
+    left: -180px;
+    top: -90px;
+}
+
+.img3 {
+    width: 110%;
+    position: relative;
+    left: -30px;
+}
+
+.img4 {
+    width: 125%;
+    position: relative;
+    left: -80px;
+}
+
+.img5 {
+    width: 100%;
+    position: relative;
+    top: -300px;
+}
+
+.img6 {
+    width: 100%;
+    position: relative;
+    top: -250px;
+}
+
+
+/* ARCHIVES PAGE */
+.damn {
+    padding-top: 280px;
+    text-align: center;
+    color: var(--red-color);
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.damn h1 {
+    font-family: var(--style-font);
+    font-size: 30px;
+}
+
+.damn p {
+    font-family: var(--body-font);
+    font-size: 24px;
+}
+
+
+
+
+/* GALLERY PAGE */ /* change to absolute positioning */
+.frames {
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    flex: row wrap;
+    /* margin: 10px; */
+}
+
+.gallery {
+    max-height: 1080px;
+    height: auto;
+}
+
+.frames:hover {
+    transform: scale(101%);
+}
+
+.frames a {
+    width: 100%;
+    height: auto;
+}
+
+.frame {
+    height: auto;
+    position: relative;
+    transition: 0.5s all linear;
+}
+
+.frame1 {
+    width: 180%;
+    left: 290px;
+    top: 240px;
+}
+
+.frame2 {
+    width: 120%;
+    left: 210px;
+    top: 530px;
+}
+
+.frame3 {
+    width: 320%;
+    left: -280px;
+    top: -10px;
+}
+
+.frame4 {
+    width: 300%;
+    left: -370px;
+    top: 260px;
+}
+
+.frame5 {
+    width: 250%;
+    top: 370px;
+    left: 110px;
+}
+
+.frame6 {
+    width: 250%;
+    top: 530px;
+    left: 320px;
+}
+
+.frame7 {
+    width: 220%;
+    left: 510px;
+    top: 110px;
+}
+
+.frame8 {
+    width: 200%;
+    left: 420px;
+    top: 420px;
+}
+
+.frame9 {
+    width: 150%;
+    top: 300px;
+    left: 20px;
+}
+
+.frame10 {
+    width: 190%;
+    left: -500px;
+    top: 50px;
+}
+
+.frame11 {
+    width: 160%;
+    left: -910px;
+    top: 10px;
+}
+
+.frame12 {
+    width: 270%;
+    left: -450px;
+    top: -5px;
+    
+}
+
+
