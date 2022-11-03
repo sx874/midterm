@@ -1,0 +1,26 @@
+@media screen and (max-width: 1000px) {
+    .logo {
+        max-width: 1000px;
+    }
+    .logo1 {
+        top: 0;
+    }
+    .logo2 {
+        top: -180px;
+    }
+    .name {
+        font-size: 55px;
+        top: 250px;
+        left: 300px;
+    }
+
+    .navBar {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .navBar a {
+        font-size: 20px;
+    }
+
+}
