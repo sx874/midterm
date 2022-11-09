@@ -244,7 +244,7 @@ a {
     position: relative;
     margin-left: -50px;
     transition: 0.2s all linear;
-    animation: abtIntroMove 1.5s reverse ease-out;
+    /* animation: abtIntroMove 1.5s reverse ease-out; */
 }
 
 .bio {
@@ -256,12 +256,18 @@ a {
     height: auto;
     margin-top: -20px;
     transition: 0.2s all linear;
-    animation: abtBioMove 1.7s reverse ease-out;
+    /* animation: abtBioMove 1.7s reverse ease-out; */
 }
 
-.intro:hover, .bio:hover {
-    transform: scale(105%);
+#id {
+    font-family: var(--style-font);
+    font-size: 26px;
+    color: var(--red-color);
 }
+
+/* .intro:hover, .bio:hover {
+    transform: scale(105%);
+} */
 
 .abtPic {
     position: relative;
@@ -271,7 +277,7 @@ a {
     height: auto;
     border: 5px var(--red-color) solid;
     transition: 0.5s all linear;
-    animation: abtPicMove 1s reverse ease-out;
+    /* animation: abtPicMove 1s reverse ease-out; */
     z-index: 3;
 }
 

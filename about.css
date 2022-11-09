@@ -1,0 +1,17 @@
+* {
+    cursor: none;
+    cursor: url();
+  }
+
+a:hover {
+    cursor: url();
+}
+  
+  .cursor-dot {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(190, 50, 40);;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1000;
+  };
